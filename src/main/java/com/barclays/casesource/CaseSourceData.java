@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.barclays.casesource;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
