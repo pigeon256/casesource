@@ -72,8 +72,6 @@ The project has a particular directory structure. A representative project is sh
 ├── External Dependencies
 ├── bin
 ├── src
-├── target
-│   └──application-0.0.1-SNAPSHOT
 ├── build.gradle
 ├── gradlew
 ├── gradlew.bat
