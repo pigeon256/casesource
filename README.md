@@ -18,13 +18,15 @@ This producer is a stand-alone springboot application that publishes the informa
 - Kafka uses ZooKeeper so you need to first start a ZooKeeper server if you don't already have one:
   
   ```shell
-  bin\windows\zookeeper-server-start.sh config\zookeeper.properties
+  cd bin\windows
+  zookeeper-server-start.bat config\zookeeper.properties
   ```
   
 - Start a Kafka broker by running the following command in a new terminal:
   
    ```shell
-   bin\windows\kafka-server-start.sh config\server.properties
+   cd bin\windows
+   kafka-server-start.bat config\server.properties
    ```
 
 # Running the application in local
@@ -50,7 +52,8 @@ mvn spring-boot:run
  #### Check the produced messages
  Go to kafka "bin" or bin/windows folder depending on the OS and run
  ```shell
- ./kafka-console-consumer.sh --zookeeper localhost:2181/kafka --topic "LENDING_UK_ACCOUNT_LOANS_PAYMENTMISS" --from-beginning
+ cd bin\windows
+ kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic "LENDING_UK_ACCOUNT_LOANS_PAYMENTMISS" --from-beginning
  ```
  ## Files and Directories
 
