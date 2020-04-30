@@ -88,7 +88,7 @@ The project has a particular directory structure. A representative project is sh
 └── stale_outputs_checked
 ```
 
-# Annotations Used Described
+# used annotations described
 - @Component:used to auto-detect and auto-configure beans using classpath scanning.
 - @Output(CASEOUT):used to identify output channels (for messages leaving the module)
 - @SpringBootApplication:enable Java-based configuration, component scanning, and to enable the auto-configuration feature of       SpringBoot application.
