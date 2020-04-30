@@ -2,9 +2,6 @@
 This readme describes the installation and configuration of the CASESOURCE producer.
 This producer is a stand-alone springboot application that publishes the information to the Kafka topic.
 
-# Version
-0.0.1-SNAPSHOT
-
 # TECH
 - Apache Zookeeper - an open-source server which enables highly reliable distributed coordination
 - Apache Kafka - a high-throughput distributed messaging system
