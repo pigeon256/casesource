@@ -6,6 +6,7 @@ This producer is a stand-alone springboot application that publishes the informa
 - Apache Zookeeper - an open-source server which enables highly reliable distributed coordination
 - Apache Kafka - a high-throughput distributed messaging system
 - Java 1.8 or higher
+- Lombok
 
 ## Prerequisites - Installing Kafka
 - download the kafka 2.5.0 release binaries and un-tar it:
@@ -86,4 +87,18 @@ The project has a particular directory structure. A representative project is sh
 ├── README.md
 └── stale_outputs_checked
 ```
- 
+
+# Annotations Used Described
+- @Component:
+- @Output(CASEOUT):
+- @SpringBootApplication:
+- @InboundChannelAdapter(channel = Source.OUTPUT, poller = @Poller(fixedRate = "5000000"))
+- @EnableBinding(Source.class):
+- @Data
+- @AllArgsConstructor
+- @NoArgsConstructor
+- @ToString
+
+# application.properties
+- spring.cloud.stream.bindings.output.destination=LENDING_UK_ACCOUNT_LOANS_PAYMENTMISS :
+
