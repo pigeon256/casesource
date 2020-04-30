@@ -50,7 +50,7 @@ gradle bootRun
 ```
  
  #### Check the produced messages
- Go to kafka "bin" or bin/windows folder depending on the OS and run
+ 
  ```shell
  cd bin\windows
  kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic "LENDING_UK_ACCOUNT_LOANS_PAYMENTMISS" --from-beginning
