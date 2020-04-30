@@ -90,19 +90,19 @@ The project has a particular directory structure. A representative project is sh
 
 # Annotations in detail
 
-- @SpringBootApplication:enable Java-based configuration, component scanning, and to enable the auto-configuration feature of        SpringBoot application.
-- @Component:used to auto-detect and auto-configure beans using classpath scanning.
-- @EnableBinding(Source.class):enables the binding of targets annotated with @OUTPUT to a broker.
-- @Output(CASEOUT):used to identify output channels (for messages leaving the module).
-- @InboundChannelAdapter(channel = Source.OUTPUT, poller = @Poller(fixedRate = "5000000")):
+- @SpringBootApplication : enable Java-based configuration, component scanning, and to enable the auto-configuration feature of        SpringBoot application.
+- @Component : used to auto-detect and auto-configure beans using classpath scanning.
+- @EnableBinding(Source.class) : enables the binding of targets annotated with @OUTPUT to a broker.
+- @Output(CASEOUT) : used to identify output channels (for messages leaving the module).
+- @InboundChannelAdapter(channel = Source.OUTPUT, poller = @Poller(fixedRate = "5000000")) :
   configure the channel to which the adapter will feed its messages (in our case, Source.OUTPUT) and 
   poller is a component which helps the adapter poll the configured folder at the specified interval even if the last        invocation may still be running.
-- @Data:it can generate getters and setters for the fields automatically.
-- @AllArgsConstructor:generates a constructor with 1 parameter for each field in your class.
-- @NoArgsConstructor:generate a constructor with no parameters.
-- @ToString:it will print the class name, along with each field, in order, separated by commas.
+- @Data : it can generate getters and setters for the fields automatically.
+- @AllArgsConstructor : generates a constructor with 1 parameter for each field in your class.
+- @NoArgsConstructor : generate a constructor with no parameters.
+- @ToString : it will print the class name, along with each field, in order, separated by commas.
 
 # application.properties
-- spring.cloud.stream.bindings.output.destination=LENDING_UK_ACCOUNT_LOANS_PAYMENTMISS:
+- spring.cloud.stream.bindings.output.destination=LENDING_UK_ACCOUNT_LOANS_PAYMENTMISS :
 Spring Cloud Stream applications connect to the broker through bindings, which link Spring Integration channels to broker destinations.
 
