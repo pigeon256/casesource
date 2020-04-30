@@ -43,10 +43,10 @@ Follow the below steps to run the project in your machine
  - refresh gradle project.
  - run the spring boot application(CaseSourceApplication.java) to produce messages to topic      "LENDING_UK_ACCOUNT_LOANS_PAYMENTMISS".
  
- Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html) like so:
+ Alternatively Go to the root of the application where `build.gradle` is available:
 
 ```shell
-mvn spring-boot:run
+gradle bootRun
 ```
  
  #### Check the produced messages
