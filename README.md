@@ -10,23 +10,31 @@ This producer is a stand-alone springboot application that publishes the informa
 - Apache Kafka - a high-throughput distributed messaging system
 - Java 1.8 or higher
 
-# Prerequisites
-- https://kafka.apache.org/quickstart can be used for installing kafka
+## Prerequisites - Installing Kafka
+- download the kafka 2.5.0 release binaries and un-tar it:
+
+  ```shell
+  tar -xzf kafka_2.12-2.5.0.tgz
+  cd kafka_2.12-2.5.0
+  ```
+  
+- Kafka uses ZooKeeper so you need to first start a ZooKeeper server if you don't already have one:
+  
+  ```shell
+  bin\windows\zookeeper-server-start.sh config\zookeeper.properties
+  ```
+  
+- Start a Kafka broker by running the following command in a new terminal:
+  
+   ```shell
+   bin\windows\kafka-server-start.sh config\server.properties
+   ```
 
 # Running the application in local
 Follow the below steps to run the project in your machine
-- Kafka uses ZooKeeper, if you do not have Zookeeper running, you can start it using the following command:
-  
-  `bin/zookeeper-server-start.sh config/zookeeper.properties`
-- Start a Kafka broker by running the following command in a new terminal:
-  
-  `bin/kafka-server-start.sh config/server.properties`
-- In another terminal, run the following command to create a Kafka topic called LENDING_UK_ACCOUNT_LOANS_PAYMENTMISS:
-  
-  `bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic LENDING_UK_ACCOUNT_LOANS_PAYMENTMISS`
-These settings can be changed respectively in config files.
 
  - Clone the Git repository.
+ 
  ```shell
  git clone "https://github.com/sarpadhy/casesource.git".
  ```
